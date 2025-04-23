@@ -52,6 +52,14 @@ Response:
   "description": "At which hour expelling a blast of super hot fire, the fiery charizard flyeth 'round the sky, burning fields and foes alike."
 }
 ```
+If the FunTranslations API rate limit is hit, you’ll get a response like this:
+```json
+{
+  "name": "charizard",
+  "description": "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything.",
+  "note": "Translation rate limit exceeded. Returning original description."
+}
+```
 
 ## Error Handling
 - If the Pokémon does not exist:
@@ -60,12 +68,14 @@ Response:
   "error": "Sorry, it looks like that Pokemon doesn't exist. Please double check the spelling or try with another name."
 }
 ```
+
 - If translation rate limit is reached:
 ```json
 {
-  "error": "Translation rate limit exceeded. Please try again later."
+  "name": "...",
+  "description": "...",
+  "note": "Translation rate limit exceeded. Returning original description."
 }
-```
 
 ## Notes
 - This version of the API uses only **core Node.js modules**: `http`, `https`, and `url` — no external libraries.
@@ -73,6 +83,6 @@ Response:
 - Ensure you have an active internet connection as the API depends on third-party services.
 
 ---
-Hope you enjoy using this simple API.
+Hope you enjoy using this API.
 
 To Pokemon, or not to Pokemon: that is the question!
