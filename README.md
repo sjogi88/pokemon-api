@@ -114,7 +114,7 @@ nvm use 18
 ```
 1. To run the server:
    ```bash
-   npm start
+   node app.js
    ```
 
 The server runs on port `3000` by default.
