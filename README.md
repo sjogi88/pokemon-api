@@ -171,7 +171,7 @@ npm test
 ### Run Specific Tests
 To run only **unit tests**:
 ```bash
-npx jest app.test.js
+npx jest app.unit.test.js
 ```
 
 To run only **integration tests**:
